@@ -1,13 +1,19 @@
 using System;
 using UnityEngine;
+using ServiceLocator.Utilities;
 
 namespace ServiceLocator.Sound
 {
-    public class SoundService : MonoBehaviour
+    public class SoundService : GenericSingleton<SoundService>
     {
         [SerializeField] private SoundScriptableObject soundScriptableObject;
         [SerializeField] private AudioSource audioEffects;
         [SerializeField] private AudioSource backgroundMusic;
+
+        protected override void Awake()
+        {
+            base.Awake();
+        }
 
         private void Start()
         {

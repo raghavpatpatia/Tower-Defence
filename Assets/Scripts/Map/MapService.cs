@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using ServiceLocator.Utilities;
 using ServiceLocator.Player;
 using ServiceLocator.Events;
 
 namespace ServiceLocator.Map
 {
-    public class MapService : MonoBehaviour
+    public class MapService : GenericSingleton<MapService>
     {
         [SerializeField] private EventService eventService;
         [SerializeField] private MapScriptableObject mapScriptableObject;
@@ -15,6 +16,11 @@ namespace ServiceLocator.Map
         private Tilemap currentTileMap;
         private MapData currentMapData;
         private SpriteRenderer tileOverlay;
+
+        protected override void Awake()
+        {
+            base.Awake();
+        }
 
         private void Start()
         {
