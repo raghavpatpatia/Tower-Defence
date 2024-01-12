@@ -11,7 +11,6 @@ namespace ServiceLocator.Utilities
             if (instance == null)
             {
                 instance = (T) this;
-                DontDestroyOnLoad(this.gameObject);
             }
             else
             {
