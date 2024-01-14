@@ -50,11 +50,11 @@ namespace ServiceLocator.Utilities
             PooledItem<T> pooledItem = pooledItems.Find(i => i.Item.Equals(item));
             pooledItem.isUsed = false;
         }
+    }
 
-        public class PooledItem<T>
-        {
-            public T Item;
-            public bool isUsed;
-        }
+    public class PooledItem<T> where T : class
+    {
+        public T Item;
+        public bool isUsed;
     }
 }
