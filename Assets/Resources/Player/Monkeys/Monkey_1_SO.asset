@@ -15,8 +15,8 @@ MonoBehaviour:
   Type: 0
   Prefab: {fileID: 534948837250446180, guid: a7b6d0649e9427c4682e70a84c411ca9, type: 3}
   RotationSpeed: 100
-  projectileType: 0
+  projectileType: 1
   Range: 3
   Cost: 50
-  AttackableBloons: 0000000001000000
+  AttackableBloons: 0000000001000000020000000300000004000000
   AttackRate: 1
